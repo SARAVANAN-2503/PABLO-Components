@@ -1,7 +1,7 @@
 {
   "name": "pablo-components",
-  "version": "0.0.3",
-  "description": "postcss-loader",
+  "version": "0.0.8",
+  "description": "",
   "main": "index.ts",
   "scripts": {
     "build": "webpack --mode production",
@@ -13,7 +13,6 @@
   },
   "keywords": [
     "react",
-    "jnana",
     "components"
   ],
   "author": "Pablo",
@@ -35,6 +34,7 @@
   },
   "dependencies": {
     "postcss-loader": "^7.0.2",
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

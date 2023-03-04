@@ -42,6 +42,8 @@ function App() {
 ## Available Components
 
 - Button
+- Modal
+- Loader
 
 A simple button component with customizable type and size.
 

@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.pablo-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.pablo-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  width: 400px;
+  max-width: 100%;
+}
+
+.pablo-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 1px 0px 0px #e0e0e0;
+  padding: 10px 0;
+}
+
+.pablo-modal-body {
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.pablo-modal-footer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0px -1px 0px 0px #e0e0e0;
+  padding: 10px 0;
+}
+
+.pablo-modal-header > .pablo-mobal-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Open Animation */
+
+.pablo-modal {
+  -webkit-animation: pablo-modal-scale-up-center 0.4s
+    cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: pablo-modal-scale-up-center 0.4s
+    cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+/* ----------------------------------------------
+ * ----------------------------------------
+ * animation pablo-modal-scale-up-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes pablo-modal-scale-up-center {
+  0% {
+    -webkit-transform: translate(-15%, -15%);
+    transform: translate(-15%, -15%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes pablo-modal-scale-up-center {
+  0% {
+    -webkit-transform: translate(-15%, -15%);
+    transform: translate(-15%, -15%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}

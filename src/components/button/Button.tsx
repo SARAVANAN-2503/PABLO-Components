@@ -1,11 +1,14 @@
 import React, { FunctionComponent, MouseEventHandler } from "react";
 import "./Button.css";
+import "./ButtonLoader.css"
 
 interface ButtonProps {
   onClick: MouseEventHandler<HTMLButtonElement>;
   children: string;
   type?: "primary" | "danger" | "transparent";
   size?: "small" | "medium" | "large";
+  className?: string;
+  onLoading?: boolean;
 }
 
 const Button: FunctionComponent<ButtonProps> = ({
@@ -13,7 +16,15 @@ const Button: FunctionComponent<ButtonProps> = ({
   children,
   type = "primary",
   size = "medium",
+  className = "",
+  onLoading = false,
 }) => {
+  const handleClick: MouseEventHandler<HTMLButtonElement> = (event) => {
+    if (!onLoading) {
+      onClick(event);
+    }
+  };
+
   return (
     <button
       className={`pablo-button pablo-button-${
@@ -24,11 +35,19 @@ const Button: FunctionComponent<ButtonProps> = ({
           : type === "transparent"
           ? "transparent"
           : "primary"
-      }`}
-      onClick={onClick}
+      } ${className}`}
+      onClick={handleClick}
       type={"button"}
+      disabled={onLoading}
     >
       {children}
+      {onLoading ? (
+        <span className="pablo-button-loader">
+          <span className="pablo-progress"></span>
+        </span>
+      ) : (
+        ""
+      )}
     </button>
   );
 };
