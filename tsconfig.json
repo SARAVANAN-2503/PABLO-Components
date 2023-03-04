@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "module": "esnext",
+      "target": "es5",
+      "jsx": "react",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "noFallthroughCasesInSwitch": true,
+      "moduleResolution": "node",
+      "lib": ["dom", "esnext"],
+      "typeRoots": ["./node_modules/@types"]
+    },
+    "exclude": ["node_modules"]
+  }
+  

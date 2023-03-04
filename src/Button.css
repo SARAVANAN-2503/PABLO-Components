@@ -1,0 +1,61 @@
+.pablo-button {
+  display: inline-block;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.pablo-button:hover {
+  scale: 0.9;
+}
+
+.pablo-button-primary {
+  background-color: #1677ff;
+  color: #ffffff;
+  outline: #6daaff;
+}
+
+.pablo-button-danger {
+  background-color: #ff4d4f;
+  color: #ffffff;
+  outline: #ff8f91;
+}
+
+.pablo-button-transparent {
+  background-color: transparent;
+  color: #212121;
+  outline: #e7e7e7;
+  border: 1px solid #e7e7e7;
+}
+
+.pablo-button-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.pablo-button-md {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.pablo-button-lg {
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+.pablo-button:hover {
+  opacity: 0.8;
+}
+
+.pablo-button:active {
+  transform: translateY(1px);
+}
+
+.pablo-button:focus {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
